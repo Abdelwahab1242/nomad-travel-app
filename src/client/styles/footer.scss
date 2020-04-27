@@ -1,0 +1,27 @@
+footer {
+  margin-top: 1rem;
+  background: transparent;
+  z-index: 99;
+  position: fixed;
+  bottom: 0;
+  margin: 1rem;
+  left: 40%;
+}
+
+footer p {
+  color: white;
+  font-size: 12px;
+}
+
+a {
+  text-decoration: none;
+}
+
+#footer-link {
+  color: white;
+  transition: all 0.5s ease 0s;
+}
+
+#footer-link:hover {
+  letter-spacing: 0.5px;
+}
