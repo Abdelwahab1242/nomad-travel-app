@@ -1,0 +1,17 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Nomad</title><link rel="icon" href="../media/logo-icon.png"/><link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400&display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css?family=Playfair+Display:700&display=swap" rel="stylesheet"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css"/><link href="tripEntry.css" rel="stylesheet"></head><body><nav class="nav-bar"><ul class="navItems"><li class="logo"><a href="index.html" class="logo-link"><img src="../media/logo.png" alt="logo" id="nav-logo"/><p id="logo-title">NOMAD</p></a></li><li class="item"><a href="myTrip.html" class="nav-link"><img src="../media/my-trips-nav.png" alt="compass" class="nav-icon"/> <span class="link-text">My Trips</span></a></li></ul></nav><div class="my-trips-container"><section id="trips-page"><div class="myTrips-title"><h1>My<br/>Trips</h1><div class="arrows-container"><img src="../media/arrow-up.png" alt="next arrow" class="prev-arrow"/> <img src="../media/arrow-up.png" alt="pervious arrow" class="next-arrow"/></div></div><section class="glider-contain multiple"><div class="glider" id="tripsCarousel"><div class="add-trip"><a href="index.html">Add<br/>Trip<br/>+</a></div></div></section></section></div><footer><p>Made with &#129505; by <a href="https://www.linkedin.com/in/abdelwahab-muhammed" target="_blank" id="footer-link">Abdelwahab Muhammed</a></p></footer><script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script><script src="./skycons.js"></script><script>// Check that service workers are supported
+      if ("serviceWorker" in navigator) {
+        // Use the window load event to keep the page load performant
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("/service-worker.js");
+        });
+      }
+
+      // Function to Show Trip Facts
+      const showFacts = id => {
+        let i;
+        const tripFacts = document.getElementsByClassName("trip-facts");
+        for (i = 0; i < tripFacts.length; i++) {
+          tripFacts[i].style.display = "none";
+        }
+        document.getElementById(id).style.display = "flex";
+      };</script><script src="tripEntry.js"></script></body></html>
